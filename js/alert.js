@@ -2,7 +2,7 @@
  * Bootstrap: alert.js v3.3.6
  * http://getbootstrap.com/javascript/#alerts
  * ========================================================================
- * Copyright 2011-2015 Twitter, Inc.
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * ======================================================================== */
 
@@ -31,7 +31,7 @@
       selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '') // strip for ie7
     }
 
-    var $parent = $(selector)
+    var $parent = $(selector === '#' ? [] : selector)
 
     if (e) e.preventDefault()
 

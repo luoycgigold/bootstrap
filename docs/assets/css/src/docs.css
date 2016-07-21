@@ -1,6 +1,6 @@
 /*!
  * Bootstrap Docs (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under the Creative Commons Attribution 3.0 Unported License. For
  * details, see https://creativecommons.org/licenses/by/3.0/.
  */
@@ -822,6 +822,7 @@ h1[id] {
   width: 180px;
   height: 20px;
   margin-top: 6px;
+  border: none;
 }
 .bs-team img {
   float: left;
@@ -1621,4 +1622,11 @@ h1[id] {
   color: #fff;
   text-decoration: none;
   background-color: #0269c2;
+}
+
+/* Nullify ill-advised printing of hrefs; see #18711 */
+@media print {
+  a[href]:after {
+    content: "" !important;
+  }
 }
